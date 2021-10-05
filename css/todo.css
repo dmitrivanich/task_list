@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: Ubuntu;
+}
+
+html {
+  filter: invert(0);
+  transition: all 1s;
+}
+
+body {
+  background-color: #f2f2f2;
+  opacity: 0.8;
+  zoom: 130%;
+}
+
+.container {
+  padding-top: 30px;
+  color: #000;
+  text-align: center;
+  width: 290px;
+  margin: auto auto;
+  display: block;
+}
+
+h2 {
+  font-family: Ubuntu;
+  font-size: 40px;
+  color: rgb(41, 41, 41);
+  letter-spacing: 2px;
+}
+
+.inputName {
+  margin: 20px 0 10px 0;
+  width: 290px;
+  padding: 10px 0 10px 0;
+  font-size: 14px;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+}
+
+.inputDiskript {
+  border: none;
+  width: 270px;
+  height: 20px;
+  font-size: 14px;
+  padding: 10px 10px 10px 10px;
+  resize: none;
+  text-align: center;
+  border-radius: 20px;
+  transition: height 0.3s linear;
+}
+
+.addTodo-btn {
+  height: 50px;
+  width: 70px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  color: #e2e2e2;
+  font-size: 17px;
+  transition: border 0.1s ease;
+  cursor: pointer;
+}
+
+.addTodo-btn:hover {
+  background-color: #f1f1f1;
+  border: 4px solid #f1f1f1;
+}
+.addTodo-btn:active {
+  border: 2px solid #d8d8d8;
+}
+
+#pushTodoIcon {
+  width: 20px;
+  height: 20px;
+  filter: invert(0.2);
+  transform: rotate(90deg);
+  padding-left: 5px;
+  pointer-events: none;
+}
+
+/* ДЛЯ ФИЛЬТРА */
+
+.filter {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 40px;
+  box-shadow: none;
+  text-align: center;
+  outline: none;
+  color: rgb(41, 41, 41);
+  cursor: pointer;
+  transition: all 0.1s;
+  position: relative;
+  background-color: #fff;
+}
+
+.filter:hover {
+  background-color: #f1f1f1;
+}
+.filter:active {
+  background-color: #d8d8d8;
+}
+
+.filterText {
+  font-size: 17px;
+  font-weight: 600;
+  position: absolute;
+  top: 15px;
+  left: 44px;
+}
+
+.filter:hover li {
+  display: block;
+  position: relative;
+  filter: opacity(1);
+}
+
+.filter:hover .filterText {
+  display: none;
+}
+
+.filter-li {
+  font-weight: 600;
+  display: none;
+  font-size: 13px;
+  background-color: rgb(255, 255, 255);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  transition: all 0.2s;
+  border-bottom: 2px solid rgb(241, 241, 241);
+  border-top: 2px solid rgb(241, 241, 241);
+  user-select: none;
+}
+
+.filter-li:hover {
+  display: block;
+  background-color: rgb(255, 255, 255);
+  color: rgb(221, 69, 69);
+}
+
+.filter-li:active {
+  display: block;
+  background-color: rgb(69, 223, 202);
+  color: rgb(0, 0, 0);
+}
+
+.btnPlace {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 13px;
+}
+/* ningt mode */
+
+#moonBtn {
+  width: 20px;
+  height: 20px;
+  padding-bottom: 0px;
+  filter: invert(0.2);
+  transform: rotate(90deg);
+  padding-left: 5px;
+  pointer-events: none;
+}
+
+.nightMode-btn {
+  height: 50px;
+  width: 60px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  color: #e2e2e2;
+  font-size: 17px;
+  transition: border 0.1s ease;
+  cursor: pointer;
+}
+
+.nightMode-btn:hover {
+  background-color: #f1f1f1;
+  border: 4px solid #f1f1f1;
+}
+.nightMode-btn:active {
+  border: 2px solid #d8d8d8;
+}
+
+/*  */
+/* Ниже стили для списка задач */
+/*  */
+
+.todo-container {
+  text-align: left;
+  margin: 20px 0 100px 0px;
+}
+
+.todo {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 12px 12px 17px 12px;
+  margin-bottom: 15px;
+  display: block;
+  opacity: 1;
+  transition: background-color 0.2s ease;
+}
+
+.todoHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.todoUp-text {
+  width: 200px;
+  color: #313131;
+  font-size: 17px;
+}
+
+.todoDown-text {
+  font-size: 13px;
+  color: #272727;
+}
+
+.todo-buttons {
+  width: 60px;
+  display: flex;
+}
+
+.todo-btn {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  margin-right: 10px;
+  transition: filter 0.1s;
+  filter: opacity(0.8);
+  cursor: pointer;
+}
+
+#trash,
+#tick {
+  width: 20px;
+}
+
+.todo-btn:hover {
+  filter: opacity(0.6);
+}
+
+.todo-btn:active {
+  filter: opacity(1);
+}
+
+.completed {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  text-decoration: line-through;
+  border: 2px solid rgb(117, 117, 117);
+}
+
+.removed {
+  opacity: 0;
+}
+
+.created {
+  opacity: 1;
+}
+
+/* HASHTAGS!!! */
+
+.hashTagBox {
+  color: rgb(17, 15, 15);
+  display: flex;
+  margin-top: 10px;
+  font-size: 12px;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.hashTag {
+  background-color: inherit;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border: 3px solid rgb(48, 46, 46);
+  border-radius: 20px;
+  padding: 1px 7px 2px 5px;
+  cursor: pointer;
+  height: 15px;
+}
+
+.hashTag:hover {
+  color: rgb(58, 53, 53);
+  border: 3px solid rgb(90, 87, 87);
+}
+
+.hashTag:active {
+  color: rgb(80, 74, 74);
+  border: 2px solid rgb(110, 107, 107);
+}
+
+.todoTime {
+  font-family: Ubuntu;
+  font-size: 12px;
+  color: rgb(41, 41, 41);
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}

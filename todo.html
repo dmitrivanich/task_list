@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список задач</title>
+  <link rel="stylesheet" href="css/todo.css">
+  <link rel="stylesheet" href="css/ht.css">
+  <link rel="stylesheet" href="css/fonts.css">
+</head>
+<body>
+  <div class="container">
+    <div class="todoMenu">
+      <header class="headText">
+        <h2>Список задач</h2>
+      </header>
+      <nav class="inputPlace">
+        <input class="inputName" type="text" placeholder="Введите название задачи...">
+        <textarea class="inputDiskript" placeholder="Введите описание задачи..."></textarea>
+      </nav>
+      <div class="btnPlace">
+        <ul name="todos" class="filter">
+          <p class="filterText">Фильтр</p>
+          <li class="filter-li" id="all">Все</li>
+          <li class="filter-li" id="completed">Выполненные</li>
+          <li class="filter-li" id="uncompleted">Невыполненные</li>
+        </ul>
+
+        <button class="nightMode-btn" type="submit">
+          <img id="moonBtn" src= "/img/moon.png">
+        </button>
+
+        <button class="addTodo-btn" type="submit">
+          <img id="pushTodoIcon" src= "/img/push.png">
+        </button>
+
+      </div>
+      <div class="htListBox">
+
+        <ul class="htList">
+        </ul>
+
+        <div class="btbBox">
+          <button class="htClearButton">Очистить</button>
+        <button class="htSortButton">Отсортировать</button>
+        </div>
+      </div>
+    </div>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+  </div>
+  
+  <script src="/js/todoPage.js"></script>
+</body>
+</html>
