@@ -8,7 +8,7 @@ const filterOption = document.querySelector(".filter")
 const clearTagsBtn = document.querySelector(".htClearButton")
 const sortTagsBtn = document.querySelector(".htSortButton")
 
-const todoObjArray = []; //массив где хранятся обьекты с данными 'задач'
+const todoObjArray = []; //массив где хранятся объекты с данными 'задач'
 const tagSet = new Set() // уникальные HashTag-и
 
 
@@ -92,7 +92,6 @@ if (JSON.parse(localStorage.getItem('todo')) !== null) {
   } else {
     counterId = todosLocal.length - 1
   }
-  //просто не трогай, работает и работает
 }
 
 // localStorage.clear() - очищает localStorage
@@ -126,7 +125,7 @@ function addTodo(e) {
   todoUpText.innerText = `${inputName.value}`;
   
   
-  //Хэштэги
+  //Хэштеги
   
   let hashTagFilter = (str) => {
     
@@ -165,7 +164,7 @@ function addTodo(e) {
   const hashTagBox = document.createElement('div');
   hashTagBox.classList.add('hashTagBox')
   
-  // с помощью SET оставляю в массиве тэгов только уникальные тэги
+  // с помощью SET оставляю в массиве тегов только уникальные теги
   let filterForTags = new Set();
   for(let item of tags) filterForTags.add(item);
   tags = Array.from(filterForTags);
@@ -186,7 +185,7 @@ function addTodo(e) {
   
   let todoObj = new Todo(todoUpText.innerText, todoDownText.innerText, tags)
   todoObjArray.push(todoObj)
-  //создание обьекта, содержащего в себе данные задачи(название, описание)
+  //создание объекта, содержащего в себе данные задачи(название, описание)
 
   inputName.value = ''
   inputName.placeholder = 'Введите название задачи...' 
