@@ -374,7 +374,6 @@ function downloadTodo() {
 }
 
 
-localStorage.clear()
 
 
 
